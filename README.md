@@ -165,6 +165,16 @@ This reference project uses **synthetic clinical data** and must not be represen
 
 Potential future work includes CI/CD tests, automated data-quality thresholds for failed `SAFE_CAST`s, stronger schema contracts, documented partition/clustering benchmarks, controlled deployment environments, and explicit operational monitoring. These are **recommendations**, not completed features.
 
+
 ## For stakeholders
 
-The project demonstrates a reproducible path from raw clinical feeds to auditable, business-oriented reporting tables. Its primary value is **traceable incremental processing, controlled updates, and reusable analytics views**, rather than unverified claims about production scale or cost savings.
+
+
+# Clone repository
+git clone https://github.com/KeshavaOfficial/GCP_Clinical_Project.git
+
+# Install requirements
+pip install -r requirements.txt
+
+The project demonstrates a reproducible path from raw clinical feeds to auditable, business-oriented reporting tables. Its primary value is **traceable incremental processing, controlled updates, and reusable analytics views**, rather than unverified claims about production scale or 
+cost savings.
