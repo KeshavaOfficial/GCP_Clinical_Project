@@ -1,0 +1,74 @@
+gcp-clinical-data-pipeline/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── airflow/
+│   ├── dags/
+│   │   └── clinical_data_pipeline.py
+│   │
+│   └── include/
+│       ├── ingestion/
+│       │   ├── trigger_flask_api.py
+│       │   ├── read_pipeline_config.py
+│       │   ├── read_extra_config.py
+│       │   ├── check_gcs_file.py
+│       │   ├── validate_clinical_files.py
+│       │   └── load_clinical_staging.py
+│       │
+│       ├── transformations/
+│       │   ├── load_gcs_to_bronze.py
+│       │   ├── transform_bronze_to_silver.py
+│       │   ├── bronze_to_silver.py
+│       │   ├── compare_clinical_incremental.py
+│       │   └── merge_clinical_incremental.py
+│       │
+│       ├── backup/
+│       │   └── archive_bronze_before_merge.py
+│       │
+│       └── audit/
+│           ├── audit_start.py
+│           ├── audit_success.py
+│           └── audit_failure.py
+│
+├── cloud_run/
+│   └── clinical_data_generator/
+│       ├── main.py
+│       ├── Dockerfile
+│       └── requirements.txt
+│
+├── sql/
+│   ├── bronze/
+│   ├── silver/
+│   ├── gold/
+│   │   ├── study_enrollment_summary.sql
+│   │   ├── treatment_analysis.sql
+│   │   ├── study_enrollment_status.sql
+│   │   └── daily_event_monitoring.sql
+│   └── audit/
+│
+├── config/
+│   ├── pipeline_config.example.yaml
+│   └── environments/
+│       ├── dev.yaml
+│       └── prod.yaml
+│
+├── tests/
+│   ├── test_dag_imports.py
+│   ├── test_incremental_merge.py
+│   └── test_silver_transformations.py
+│
+├── scripts/
+│   ├── deploy_dags.sh
+│   └── trigger_pipeline.sh
+│
+├── docs/
+│   ├── architecture.md
+│   ├── implementation.md
+│   ├── troubleshooting.md
+│   └── interview_guide.md
+│
+├── .gitignore
+├── requirements.txt
+└── README.md

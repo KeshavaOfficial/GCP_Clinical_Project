@@ -1,0 +1,35 @@
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.json.key
+*service-account*.json
+*credentials*.json
+*.pem
+*.p12
+*.pfx
+*.key
+secrets/
+
+# Clinical data / extracts (including synthetic generated batches)
+data/
+exports/
+landing/
+*.csv
+*.parquet
+*.xlsx
+*.xls
+*.db
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.log
+.DS_Store
+.vscode/
+.idea/

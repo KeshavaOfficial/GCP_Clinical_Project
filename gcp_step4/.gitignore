@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+*service-account*.json
+*.pem
+*.p12
+__pycache__/
+*.py[cod]
+.venv/
+*.csv
+*.xlsx
+*.parquet
